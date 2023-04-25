@@ -1,0 +1,53 @@
+// Mixins & Variables //
+
+$main-fonts: Arial, sans-serif;
+$headings-color: rgb(255, 59, 163);
+$background-color: rgb(59, 10, 10);
+
+@mixin flexRule {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
+  margin: auto;
+}
+
+@mixin addBorder {
+  border: 1px solid darkgray;
+  height: 320px;
+  width: 200px;
+  padding: 20px;
+  background-color: azure;
+}
+
+@mixin bodyText {
+  margin-top: 5px;
+  list-style-type: none;
+}
+
+// Table Styling //
+
+body {
+  font-family: $main-fonts;
+  background-color: $background-color;
+}
+h2 {
+  color: $headings-color;
+}
+
+.pricing-table {
+  @include flexRule;
+  justify-content: center;
+}
+
+.plan {
+  @include addBorder();
+}
+
+li {
+  @include bodyText();
+}
+
+ul {
+  padding-left: 0px;
+}
